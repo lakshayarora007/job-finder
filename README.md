@@ -58,7 +58,14 @@ refreshed daily.
 - `jsearch_api_key` — RapidAPI key subscribed to the free JSearch plan.
   Enables the Google-for-Jobs source.
 
-Environment variables `APIFY_TOKEN` / `JSEARCH_API_KEY` override the file.
+- `nvidia_api_key` — build.nvidia.com key. Enables LLM parsing of LinkedIn
+  hiring posts (regex fallback without it).
+
+Quick start: `copy secrets.example.json secrets.json` and fill in the keys you
+have (see also `.env.example` for the environment-variable names).
+
+Environment variables `APIFY_TOKEN` / `JSEARCH_API_KEY` / `NVIDIA_API_KEY`
+override the file.
 Missing keys just skip those sources — everything else still runs.
 
 ## Running it manually
